@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aswathy N.M – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Poppins',sans-serif;background:#fff;color:#333;overflow-x:hidden;}
+
+    /* ========== NAVBAR ========== */
+    nav{
+      position:fixed;top:0;left:0;width:100%;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:20px 10%;z-index:1000;
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,0.6);
+      box-shadow:0 4px 20px rgba(0,0,0,0.05);
+    }
+    nav h2{color:#5a0f2e;font-weight:700;font-family:'Inter',sans-serif;}
+    nav ul{display:flex;gap:25px;list-style:none;}
+    nav ul li a{
+      text-decoration:none;color:#0a74da;font-weight:500;transition:.3s;
+    }
+    nav ul li a:hover{color:#5a0f2e;}
+
+    /* ========== HERO SECTION ========== */
+    .hero{
+      position:relative;
+      display:flex;flex-wrap:wrap;
+      justify-content:space-between;align-items:center;
+      min-height:100vh;
+      padding:120px 10% 80px;
+      background:linear-gradient(135deg,#1a1a2e 0%,#3e1e68 50%,#5a0f2e 100%);
+      overflow:hidden;
+    }
+
+    /* Blob shapes */
+    .blob{
+      position:absolute;border-radius:50%;
+      filter:blur(80px);opacity:.5;
+      animation:float 8s ease-in-out infinite alternate;
+    }
+    .blob.one{width:400px;height:400px;background:#5a0f2e;top:-100px;left:-100px;}
+    .blob.two{width:500px;height:500px;background:#3e1e68;bottom:-150px;right:-150px;}
+    .blob.three{width:300px;height:300px;background:#1a1a2e;top:40%;left:50%;}
+
+    @keyframes float{0%{transform:translateY(0);}100%{transform:translateY(-40px);}}
+
+    /* Hero text */
+    .hero-content{flex:1;min-width:300px;z-index:5;color:#f4f4f4;}
+    .hero-content h1{
+      font-size:3.2em;line-height:1.2;margin-bottom:20px;
+      background:linear-gradient(90deg,#d3d3d3,#ffffff);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    }
+    .hero-content p{
+      max-width:520px;font-size:1.1em;line-height:1.7;
+      color:#e0e0e0;margin-bottom:30px;
+    }
+    .hero-content button{
+      background:#0a74da;border:none;color:#fff;
+      padding:14px 32px;font-size:1em;border-radius:8px;
+      cursor:pointer;transition:.3s;
+      box-shadow:0 0 10px rgba(10,116,218,0.4);
+    }
+    .hero-content button:hover{
+      transform:translateY(-3px);
+      box-shadow:0 0 20px rgba(10,116,218,0.7);
+    }
+
+    /* Profile image */
+    .hero-image{flex:1;display:flex;justify-content:center;align-items:center;z-index:5;}
+    .hero-image img{
+      width:360px;height:420px;object-fit:cover;
+      border-radius:25px;border:4px solid rgba(255,255,255,0.3);
+      box-shadow:0 20px 40px rgba(0,0,0,0.4);
+      backdrop-filter:blur(5px);
+      transition:.5s;
+    }
+    .hero-image img:hover{transform:scale(1.03);}
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>Aswathy N.M</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <!-- Gradient blobs -->
+    <div class="blob one"></div>
+    <div class="blob two"></div>
+    <div class="blob three"></div>
+
+    <div class="hero-content">
+      <h1>Hi, I’m Aswathy N.M</h1>
+      <p>ML & AI Developer | Data Science & Analytics Trainer.  
+      I build intelligent systems and empower others to use data for smarter decisions.</p>
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Let’s Connect</button>
+    </div>
+
+    <div class="hero-image">
+      <img src="D:/ME/Porfolio/your-photo.jpg.jpg" alt="Aswathy N.M">
+    </div>
+  </section>
+
+
+    <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" style="padding:100px 10%;background:#ffffff;text-align:center;">
+    <h2 style="color:#5a0f2e;font-size:2.6em;margin-bottom:30px;font-family:'Inter',sans-serif;">About Me</h2>
+    <p style="max-width:850px;margin:auto;font-size:1.15em;color:#333;line-height:1.8;">
+      I’m a <strong>Machine Learning & AI Developer</strong> and <strong>Data Science & Analytics Trainer</strong> with
+      a strong academic background — MCA from SRM University and B.Sc Computer Science from MG University.  
+      Over the years I’ve worked with BigLeap Solutions, Beat Education, Cysonet Technologies and Maitexa Technologies,
+      focusing on AI model development, data analytics training and enterprise solutions.
+    </p>
+  </section>
+
+  <!-- ========== SERVICES SECTION ========== -->
+<section id="services" style="padding:100px 10%;background:#f9fafc;text-align:center;">
+  <h2 style="color:#5a0f2e;font-size:2.6em;margin-bottom:50px;font-family:'Inter',sans-serif;">My Services</h2>
+
+  <div class="services-grid" style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:35px;">
+      
+    <div class="service-card">
+      <h3>ML & AI Model Development</h3>
+      <p>Custom machine learning solutions tailored to real-world business needs.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Data Analytics Training</h3>
+      <p>Comprehensive hands-on training for individuals and corporate teams in analytics & visualization tools.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>AI Project Consulting</h3>
+      <p>End-to-end consulting on AI strategy, model selection, deployment and optimization.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Dashboard Creation</h3>
+      <p>Designing interactive dashboards in Power BI & Tableau to turn data into insightful stories.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card h3 {
+    color: #5a0f2e;
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .service-card h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #5a0f2e, #0a74da);
+    transition: width 0.4s ease;
+    border-radius: 2px;
+  }
+
+  .service-card:hover h3::after {
+    width: 100%;
+  }
+
+  .service-card p {
+    font-size: 0.98em;
+    line-height: 1.7;
+    color: #444;
+    transition: color 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 18px 35px rgba(90,15,46,0.15);
+  }
+
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(90,15,46,0.1), rgba(10,116,218,0.05));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  .service-card:hover p {
+    color: #222;
+  }
+</style>
+
+
+  <!-- ========== PORTFOLIO SECTION ========== -->
+<section id="portfolio" style="padding:100px 10%;background:#ffffff;text-align:center;">
+  <h2 style="color:#5a0f2e;font-size:2.6em;margin-bottom:50px;font-family:'Inter',sans-serif;">Projects</h2>
+
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="D:\ME\Porfolio\for-job-board-saas-providers.jpg" alt="OpportunityRelay">
+      <div class="project-info">
+        <h3>OpportunityRelay</h3>
+        <p>
+          Automated job aggregation and email notification system designed to enhance campus placement efficiency using web scraping and scheduling.
+        </p>
+        <button>View Project</button>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="D:\ME\Porfolio\auctions-1.jpg" alt="AuctionSense">
+      <div class="project-info">
+        <h3>AuctionSense</h3>
+        <p>
+          Deep learning–based CNN system for real-time gesture recognition and bid ranking during live auction events.
+        </p>
+        <button>View Project</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+
+  .project-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 4px solid #5a0f2e;
+    transition: transform 0.5s ease;
+  }
+
+  .project-card:hover img {
+    transform: scale(1.08);
+  }
+
+  .project-info {
+    padding: 25px;
+    text-align: left;
+    background: linear-gradient(180deg, #ffffff, #f9f9f9);
+  }
+
+  .project-info h3 {
+    color: #5a0f2e;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+  }
+
+  .project-info p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .project-info button {
+    background: #0a74da;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .project-info button:hover {
+    background: #5a0f2e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(90, 15, 46, 0.3);
+  }
+
+  /* Hover lift effect for the card */
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(90, 15, 46, 0.15);
+  }
+
+  /* Scroll fade-in */
+  .project-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+  }
+
+  .project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  // Scroll fade-in animation
+  const projectCards = document.querySelectorAll(".project-card");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+  projectCards.forEach((card) => observer.observe(card));
+</script>
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" style="padding:100px 10%;background:#f9fafc;text-align:center;">
+    <h2 style="color:#5a0f2e;font-size:2.6em;margin-bottom:40px;font-family:'Inter',sans-serif;">Get in Touch</h2>
+    <p style="max-width:650px;margin:0 auto 40px;color:#333;font-size:1.1em;line-height:1.6;">
+      Have a project idea, training requirement, or collaboration in mind?  
+      Let’s connect and discuss how we can work together to build intelligent, data-driven solutions.
+    </p>
+
+    <form id="contact-form" style="max-width:600px;margin:auto;display:flex;flex-direction:column;gap:20px;">
+      <input type="text" id="name" placeholder="Your Name" required
+             style="padding:14px;border-radius:8px;border:1px solid #ccc;font-size:1em;">
+      <input type="email" id="email" placeholder="Your Email" required
+             style="padding:14px;border-radius:8px;border:1px solid #ccc;font-size:1em;">
+      <textarea id="message" rows="5" placeholder="Your Message" required
+             style="padding:14px;border-radius:8px;border:1px solid #ccc;font-size:1em;"></textarea>
+      <button type="submit"
+              style="background:#0a74da;color:#fff;padding:14px;border:none;border-radius:8px;
+                     cursor:pointer;font-size:1em;transition:.3s;">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer style="background:#1a1a2e;color:#eaeaea;padding:25px;text-align:center;font-size:0.95em;">
+    © 2025 Aswathy N.M | ML & AI Developer | Data Science Trainer
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // ================== EMAILJS CONFIG ==================
+    (function(){emailjs.init('YOUR_PUBLIC_KEY');})();
+    const form=document.getElementById('contact-form');
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      emailjs.send('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID',{
+        from_name:form.name.value,
+        from_email:form.email.value,
+        message:form.message.value
+      }).then(()=>{alert('✅ Message sent successfully!');form.reset();},
+               ()=>{alert('❌ Failed to send message. Please try again.');});
+    });
+
+    // ================== PARALLAX BLOBS ==================
+    const blobs=document.querySelectorAll('.blob');
+    document.addEventListener('mousemove',e=>{
+      let x=(e.clientX/window.innerWidth-0.5)*25;
+      let y=(e.clientY/window.innerHeight-0.5)*25;
+      blobs.forEach((b,i)=>{b.style.transform=`translate(${x*i}px,${y*i}px)`;});
+    });
+
+    // ================== SCROLL FADE ANIMATION ==================
+    const sections=document.querySelectorAll("section");
+    const observer=new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.style.transition="opacity 1s ease, transform 1s ease";
+          entry.target.style.opacity="1";
+          entry.target.style.transform="translateY(0)";
+        }
+      });
+    },{threshold:0.1});
+    sections.forEach(section=>{
+      section.style.opacity="0";
+      section.style.transform="translateY(50px)";
+      observer.observe(section);
+    });
+
+    // ================== PORTFOLIO HOVER ==================
+    document.querySelectorAll('.portfolio-item').forEach(item=>{
+      const overlay=item.children[1];
+      item.addEventListener('mouseenter',()=>overlay.style.opacity='1');
+      item.addEventListener('mouseleave',()=>overlay.style.opacity='0');
+    });
+  </script>
+</body>
+</html>
